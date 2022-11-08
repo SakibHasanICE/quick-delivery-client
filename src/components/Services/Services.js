@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+
 import Service from '../Service/Service';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/services")
+      fetch("http://localhost:5000/")
         .then((res) => res.json())
         .then((data) => setServices(data));
     }, []);
@@ -13,7 +14,7 @@ const Services = () => {
         <div className="card gap-9 mx-5 mt-5 ">
           {services.map(service => (
             <Service key={service.id} service={service}></Service>
-          ))}
+          ))};
         </div>
         {/* <div className="border-slate-400 rounded-md border-2 mt-5">
           {courses.map((course) => (

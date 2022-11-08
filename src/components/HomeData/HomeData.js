@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-const Service = ({service}) => {
+import { Link } from 'react-router-dom';
+
+const HomeData = ({service}) => {
     const { _id, img, name, price } = service;
     return (
         <div className="border-slate-400 rounded-md border-2 px-4 pb-9">
@@ -15,4 +16,4 @@ const Service = ({service}) => {
     );
 };
 
-export default Service;
+export default HomeData;

@@ -4,3 +4,31 @@
     background-repeat: no-repeat;
     height: 90vh;
 }
+.card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+  @media  screen and (max-width:576px){
+    .card {
+      
+      grid-template-columns: 1fr;
+    }
+    .body-container {
+   
+      grid-template-columns:  1fr;
+     
+    }
+  }
+  @media  screen and (min-width:577px) and (max-width:768px){
+    .card {
+      
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .body-container {
+   
+      grid-template-columns: 1fr;
+     
+    }
+  } 
