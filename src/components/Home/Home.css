@@ -1,8 +1,9 @@
 .background-image{
-    background-image: url('https://www.shutterstock.com/shutterstock/photos/1505134388/display_1500/stock-vector-online-delivery-service-concept-online-order-tracking-delivery-home-and-office-city-logistics-1505134388.jpg');
+    
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
+    background: linear-gradient(rgba(39, 37, 37, 0.6),rgba(0,0,0,0.3)),  url('https://www.shutterstock.com/shutterstock/photos/1505134388/display_1500/stock-vector-online-delivery-service-concept-online-order-tracking-delivery-home-and-office-city-logistics-1505134388.jpg');
 }
 .card{
     display: grid;
