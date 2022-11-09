@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Contexts/UserContext";
 import img from "../images/logo.png";
 import "./Header.css";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="bg-red-400 h-20 flex items-center  overflow-hidden">
       <img className="w-20 ml-14 rounded-2xl" src={img} alt="" />
@@ -21,12 +23,19 @@ const Header = () => {
           <Link className="mx-3 text-white" to="/blog">
             Blog
           </Link>
-          <Link className="mx-3 text-white" to="/blog">
-            Theme
-          </Link>
           <Link className="mx-3 text-white" to="/login">
             Login
           </Link>
+          {user?.email && 
+          <div>
+           <Link className="mx-3 text-white" to="/logout"> Logout</Link>
+          <Link className="mx-3 text-white" to="/reviews"> My reviews</Link>
+          <Link className="mx-3 text-white" to="/addservice"> Add Service</Link>
+
+          </div> 
+       
+
+          }
           </nav>
       </div>
 

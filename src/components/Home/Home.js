@@ -14,12 +14,13 @@ const Home = () => {
             We do our best to provide you best online delivery services in all
             catagory
           </p>
-          <p className="text-4xl font-bold text-white">
-            Our motto is to make everything available is just your doorstep.
+          <p className="text-4xl font-bold text-white mt-5">
+            "Our motto is to make everything available is just your doorstep".
           </p>
         </div>
       </div>
       <div className="body-container w-11/12 mx-auto">
+        <p className="mt-7 mb-2 text-3xl text-cyan-500 underline font-bold  ">Services</p>
         <div className="card gap-9 mx-5 mt-5 ">
           {services.map((service) => (
             <HomeData key={service.id} service={service}></HomeData>
@@ -28,7 +29,7 @@ const Home = () => {
         </div>
       </div>
       <Link to="/services">
-        <button className="block w-9/12 rounded-md bg-red-500 mx-auto  mt-2 h-10 text-white font-bold text-xl">
+        <button className="block w-36 mb-7 rounded-md bg-red-500 mx-auto  mt-2 h-10 text-white font-bold text-xl">
           {" "}
           see all{" "}
         </button>

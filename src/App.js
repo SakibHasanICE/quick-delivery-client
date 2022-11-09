@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
   const router=createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
         {
             path: "/services",
             element: <Services></Services>,
+        },
+        {
+            path: "/reviews",
+            element: <Reviews></Reviews>,
         },
         {
           path: "login",
