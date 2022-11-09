@@ -6,6 +6,7 @@ import Home from "./components/Home/Home"
 import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 function App() {
   const router=createBrowserRouter([
@@ -23,8 +24,12 @@ function App() {
             element: <Services></Services>,
         },
         {
-            path: "/login",
-            element: <Login></Login>,
+          path: "login",
+          element: <Login></Login>,
+        },
+        {
+          path: "register",
+          element: <Register></Register>,
         },
         {
           path: "/service/:id",

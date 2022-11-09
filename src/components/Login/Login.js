@@ -4,7 +4,7 @@ import { AuthContext } from '../Contexts/UserContext';
 
 import './Login.css'
 const Login = () => {
-    const {login,signinWithGoogle,signinWithGithub}=useContext(AuthContext);
+    const {login,signinWithGoogle}=useContext(AuthContext);
     const handleSubmit = event=>{
         event.preventDefault();
         const form =event.target;
@@ -30,14 +30,7 @@ const Login = () => {
         })
         .catch(error=>console.error(error))
 }   
-    const handleGithubsignin=()=>{
-        signinWithGithub()
-        .then(result=>{
-            const user=result.user;
-            <p className="text-red-600 text-xl">{user.email}</p>  
-        })
-        .catch(error=>console.error(error))
-}   
+  
     return (
         <div className='form-container h-fit container mx-auto'>
             <h2 className='text-3xl'>Login</h2>
@@ -48,8 +41,7 @@ const Login = () => {
                 <input className='border-black p-2  rounded-md border-2 w-9/12 h-10' type="password"  name="password" required/>
                 <button className='block w-9/12 rounded-md bg-red-500 mx-auto mt-5 h-10 text-white font-bold text-xl' type="submit">Submit</button>
                 <p className='mt-3 text-md mb-2'>New to Learning media?<Link className="mx-3 text-red-700 font-bold text-xl" to="/register">Register</Link></p>
-                <button onClick={handleGooglesignin} className='block mb-2 w-9/12 rounded-md bg-amber-600 mx-auto mt-5 h-10 text-white font-bold text-xl' type="submit">Google</button> 
-                <button onClick={handleGithubsignin} className='block mb-10 w-9/12 rounded-md bg-gray-600 mx-auto  h-10 text-white font-bold text-xl' type="submit">Github</button> 
+                <button onClick={handleGooglesignin} className='block mb-12 w-9/12  rounded-md bg-amber-600 mx-auto mt-5 h-10 text-white font-bold text-xl' type="submit">Google</button>  
                 
             </form>
         </div>
