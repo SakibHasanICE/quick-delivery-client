@@ -25,7 +25,7 @@ function App() {
             element: <Services></Services>,
         },
         {
-            path: "/reviews",
+            path: "/review",
             element: <Reviews></Reviews>,
         },
         {

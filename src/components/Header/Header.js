@@ -29,7 +29,7 @@ const Header = () => {
           {user?.email && 
           <div>
            <Link className="mx-3 text-white" to="/logout"> Logout</Link>
-          <Link className="mx-3 text-white" to="/reviews"> My reviews</Link>
+          <Link className="mx-3 text-white" to="/review"> My reviews</Link>
           <Link className="mx-3 text-white" to="/addservice"> Add Service</Link>
 
           </div> 
