@@ -46,7 +46,6 @@ const ServiceDetails = () => {
         <p className="text-lg text-emerald-800 mb-11 font-medium mt-2 w-10/12 mx-auto text-justify">
           {details.information}
         </p>
-        <p>nsc</p>
       </div>
         {
             user.email===user?.email ?   
