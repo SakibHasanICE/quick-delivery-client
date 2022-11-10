@@ -1,8 +1,8 @@
-import {Helmet} from "react-helmet";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import Main from "./components/Layouts/Main"
+import { Helmet } from "react-helmet";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./components/Layouts/Main";
 import "./App.css";
-import Home from "./components/Home/Home"
+import Home from "./components/Home/Home";
 import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Login/Login";
@@ -10,23 +10,23 @@ import Register from "./components/Register/Register";
 import Reviews from "./components/Reviews/Reviews";
 
 function App() {
-  const router=createBrowserRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-      children:[
+      children: [
         {
-            path: "/",
-            loader: () => fetch ("http://localhost:5000/services"),
-            element: <Home></Home>,
+          path: "/",
+          loader: () => fetch("https://quick-delivery-server.vercel.app/services"),
+          element: <Home></Home>,
         },
         {
-            path: "/services",
-            element: <Services></Services>,
+          path: "/services",
+          element: <Services></Services>,
         },
         {
-            path: "/review",
-            element: <Reviews></Reviews>,
+          path: "/review",
+          element: <Reviews></Reviews>,
         },
         {
           path: "login",
@@ -40,16 +40,13 @@ function App() {
           path: "/service/:id",
           element: <ServiceDetails></ServiceDetails>,
           loader: ({ params }) =>
-            fetch(
-              `http://localhost:5000/service/${params.id}`
-            ),
+            fetch(`https://quick-delivery-server.vercel.app/service/${params.id}`),
         },
       ],
-    },  
+    },
   ]);
   return (
     <div className="App">
-
       <Helmet>
         <meta charSet="utf-8" />
         <title>Quick Delivery</title>
